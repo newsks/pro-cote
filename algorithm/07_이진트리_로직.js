@@ -5,12 +5,10 @@ class Node {
     this.right = null;
   }
 }
-
 class Tree {
   constructor(node) {
     this.root = node;
   }
-
   display() {
     const queue = new Queue();
     queue.enqueue(this.root);

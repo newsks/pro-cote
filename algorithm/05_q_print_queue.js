@@ -27,13 +27,11 @@ class Node {
     this.next = null; //next 포인터 선언
   }
 }
-
 class Queue {
   constructor() {
     this.head = null;
     this.tail = null;
   }
-
   // 값을 추가하기 위한
   enqueue(newValue) {
     const newNode = new Node(newValue);
@@ -66,7 +64,6 @@ function solution(priorities, location) {
   priorities.sort((a, b) => b - a); // 우선 순위 높은순위대로 정렬 내림차순정렬 9~
 
   // 내가 요청한 인쇄가 몇번째 인쇄되는지 확인 로직
-
   let count = 0;
   while (true) {
     // queue가 있다면 계속 루프를 돌려준다

@@ -27,6 +27,7 @@ class Node {
     this.next = null; //next 포인터 선언
   }
 }
+
 class Queue {
   constructor() {
     this.head = null;
@@ -65,6 +66,7 @@ function solution(priorities, location) {
 
   // 내가 요청한 인쇄가 몇번째 인쇄되는지 확인 로직
   let count = 0;
+
   while (true) {
     // queue가 있다면 계속 루프를 돌려준다
     const currentValue = queue.peek(); // 현재값은 front값

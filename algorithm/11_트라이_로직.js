@@ -16,7 +16,6 @@ class Trie {
       if (!currentNode.children.has(char)) {
         currentNode.children.set(char, new Node(currentNode.value + char));
       }
-
       currentNode = currentNode.children.get(char);
     }
   }

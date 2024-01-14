@@ -58,7 +58,6 @@ class MaxHeap {
       leftIndex = currentIndex * 2;
       rightIndex = currentIndex * 2 + 1;
     }
-
     return returnValue;
   }
 }
@@ -69,13 +68,11 @@ function solution(no, works) {
   if (works.reduce((a, b) => a + b) <= no) {
     return 0;
   }
-
   // max heap 구성
   const heap = new MaxHeap();
   for (const work of works) {
     heap.push(work);
   }
-
   // no만큼 루프 돌면서 가장 큰 값을 빼서 처리 후 다시 push
   for (let i = 0; i < no; i += 1) {
     heap.push(heap.pop() - 1);

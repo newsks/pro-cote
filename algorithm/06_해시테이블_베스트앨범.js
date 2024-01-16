@@ -30,7 +30,6 @@ function solution(genres, plays) {
 
   genres
     .map((genres, index) => [genres, plays[index]])
-
     .forEach(([genre, play], index) => {
       const data = genreMap.get(genre) || { total: 0, songs: [] }; // 장르를 data로 변수생성 || 초기값도 생성 에러나니깐
 

@@ -29,15 +29,18 @@ class Queue {
     this.front = 0;
     this.rear = 0;
   }
+
   enqueue(value) {
     this.queue[this.rear++] = value; // 변수를 받아서 rear에 하나씩 추가
   }
+
   dequeue() {
     const value = this.queue[this.front]; // 우선 front에 있는 값을 빼내고
     delete this.queue[this.front]; //기존에 있던 배열에 있던 값은 지워준다
     this.front += 1; //front를 하나 증가시킴
     return value;
   }
+
   isEmpty() {
     return this.rear === this.front;
   }
@@ -58,6 +61,7 @@ function solution(n, edge) {
   // BFS
   const queue = new Queue();
   queue.enqueue(1);
+
   while (!queue.isEmpty()) {
     // queue가 비어있는지 안비어있는지
     const src = queue.dequeue(); // shift를 dequeue로 바꿔준다
@@ -70,6 +74,7 @@ function solution(n, edge) {
       }
     }
   }
+
   // console.log(distance); // [0,1,2,2,3,3,3]
   const max = Math.max(...distance); // 거리들 중에 가장 큰 값을 뽑아준다
   return distance.filter((item) => item === max).length; // 최대값과 같은 요소들이 몇개나 있는지 length를 통해 구해준다

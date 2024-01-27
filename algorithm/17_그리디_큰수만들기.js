@@ -30,11 +30,9 @@ function solution(number, k) {
     }
     stack.push(item);
   }
-
   while (count < k) {
     stack.pop();
     count += 1;
   }
-
   return stack.join("");
 }

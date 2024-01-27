@@ -37,10 +37,12 @@ function solution(n, edge) {
 
   // BFS(너비우선탐색) : 간선을 순회하기위해 인접요소부터 탐색
   const queue = [1];
+
   while (queue.length > 0) {
     const src = queue.shift(); // 원점 shift는 O(n)이지만 요소가 적을 경우에는 자바스크립트 엔진에서 최적화를 해준다.
     for (const dest of graph[src]) {
       //출발지로부터 목적지 요소들을 뽑아준다
+
       if (distance[dest] === 0) {
         //아직 가지않은 경로는 0으로 초기화 되어있음
         queue.push(dest);
@@ -48,6 +50,7 @@ function solution(n, edge) {
       }
     }
   }
+
   // console.log(distance); // [0,1,2,2,3,3,3]
   const max = Math.max(...distance); // 거리들 중에 가장 큰 값을 뽑아준다
   return distance.filter((item) => item === max).length; // 최대값과 같은 요소들이 몇개나 있는지 length를 통해 구해준다

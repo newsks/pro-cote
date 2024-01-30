@@ -27,7 +27,6 @@
 
 function solution(genres, plays) {
   const genreMap = new Map();
-
   genres
     .map((genres, index) => [genres, plays[index]]) //장르와 재생횟수로 묶어 준다
     .forEach(([genre, play], index) => {
@@ -48,6 +47,7 @@ function solution(genres, plays) {
   // 반환값을 만든다. 장르에 있는 값들을 내리차순 정렬
   // flatMap을 이용해서 배열 2번째 오브젝트에 있는 노래들을 하나의 배열로 만든다.
   // 다른 요소는 다 버리고 노래의 인덱스만 뽑아준다
+
   return [...genreMap.entries()]
     .sort((a, b) => b[1].total - a[1].total) //같은 장르끼리 묶어준다
     .flatMap((item) => item[1].songs)

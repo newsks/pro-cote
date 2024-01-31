@@ -39,6 +39,7 @@ function solution(words) {
   for (const word of words) {
     let count = 0;
     let current = trie;
+
     for (const [index, letter] of [...word].entries()) {
       count += 1;
       if (current[letter][0] <= 1) {

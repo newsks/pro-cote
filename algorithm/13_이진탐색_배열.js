@@ -9,7 +9,6 @@ function binarySearch(array, findValue) {
     if (array[mid] === findValue) {
       return mid;
     }
-
     if (array[mid] < findValue) {
       left = mid + 1;
     } else {

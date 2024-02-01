@@ -25,7 +25,6 @@ function makeTrie(words) {
       if (!current[letter]) current[letter] = [0, {}];
 
       current[letter][0] = 1 + (current[letter][0] || 0);
-
       current = current[letter][1];
     }
   }

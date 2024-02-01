@@ -10,7 +10,6 @@ class BinarySearchTree {
   constructor() {
     this.root = null;
   }
-
   insert(value) {
     const newNode = new Node(value);
     if (this.root === null) {
@@ -41,7 +40,6 @@ class BinarySearchTree {
       if (currentNode.value === value) {
         return true;
       }
-
       if (currentNode.value < value) {
         currentNode = currentNode.right;
       } else {

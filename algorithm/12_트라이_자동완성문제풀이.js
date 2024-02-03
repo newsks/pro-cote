@@ -19,6 +19,7 @@
 
 function makeTrie(words) {
   const root = {};
+
   for (const word of words) {
     let current = root;
     for (const letter of word) {

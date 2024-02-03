@@ -12,7 +12,6 @@ class Trie {
 
   insert(string) {
     let currentNode = this.root;
-
     for (const char of string) {
       if (!currentNode.children.has(char)) {
         currentNode.children.set(char, new Node(currentNode.value + char));

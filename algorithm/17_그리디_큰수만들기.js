@@ -35,5 +35,6 @@ function solution(number, k) {
     stack.pop();
     count += 1;
   }
+
   return stack.join("");
 }

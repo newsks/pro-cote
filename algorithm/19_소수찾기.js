@@ -20,6 +20,7 @@
 
 function solution(n) {
   const prime = Array(n + 1).fill(true);
+
   prime[0] = prime[1] = false;
 
   for (let i = 2; i * i <= n; i++) {
@@ -29,5 +30,6 @@ function solution(n) {
       }
     }
   }
+
   return prime.filter((x) => x).length;
 }

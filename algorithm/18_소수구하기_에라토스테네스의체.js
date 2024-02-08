@@ -8,5 +8,6 @@ function get_primes(num) {
       }
     }
   }
+
   return prime.filter(Boolean);
 }

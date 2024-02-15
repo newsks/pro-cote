@@ -44,6 +44,7 @@ function solution(N, road, K) {
 
   // 다익스트라 알고리즘
   const dist = Array(N + 1).fill(Infinity);
+
   dist[1] = 0;
   const visited = Array(N + 1).fill(false);
 
@@ -57,8 +58,10 @@ function solution(N, road, K) {
         curr = j;
       }
     }
+
     if (curr < 0) return;
     visited[curr] = true;
+
     for (let j = 1; j <= N; j++) {
       if (dist[j] > dist[curr] + adj[curr][j]) {
         dist[j] = dist[curr] + adj[curr][j];
@@ -70,5 +73,6 @@ function solution(N, road, K) {
   dist.forEach((d) => {
     if (d <= K) answer++;
   });
+
   return answer;
 }

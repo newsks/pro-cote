@@ -28,5 +28,6 @@ function solution(n) {
       }
     }
   }
+
   return prime.filter((x) => x).length;
 }

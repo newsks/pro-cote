@@ -37,11 +37,8 @@ function solution(n, edge) {
 
   // BFS(너비우선탐색) : 간선을 순회하기위해 인접요소부터 탐색
   const queue = [1];
-
   while (queue.length > 0) {
-    
     const src = queue.shift(); // 원점 shift는 O(n)이지만 요소가 적을 경우에는 자바스크립트 엔진에서 최적화를 해준다.
-
     for (const dest of graph[src]) {
       //출발지로부터 목적지 요소들을 뽑아준다
 

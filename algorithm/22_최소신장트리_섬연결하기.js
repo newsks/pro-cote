@@ -37,11 +37,9 @@ function solution(n, costs) {
   }
   return answer;
 }
-
 function isConnected(bridge, islands) {
   return islands[bridge[0]] === islands[bridge[1]];
 }
-
 function connect(bridge, islands) {
   let small = Math.min(islands[bridge[0]], islands[bridge[1]]);
   let big = Math.max(islands[bridge[0]], islands[bridge[1]]);

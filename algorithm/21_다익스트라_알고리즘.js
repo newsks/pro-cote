@@ -34,6 +34,7 @@ function solution(N, road, K) {
       if (i === j) adj[i][j] = 0;
     }
   }
+
   // 주어진 도로 정보를 인접 행렬에 반영
   road.forEach(([a, b, c]) => {
     if (c < adj[a][b]) {

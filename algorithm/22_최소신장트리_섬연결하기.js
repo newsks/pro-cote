@@ -28,6 +28,7 @@ function solution(n, costs) {
   for (let i = 0; i < n; i++) {
     islands[i] = i;
   }
+
   while (bridges.length > 0) {
     let bridge = bridges.shift();
     if (!isConnected(bridge, islands)) {
@@ -35,11 +36,14 @@ function solution(n, costs) {
       answer += bridge[2];
     }
   }
+
   return answer;
 }
+
 function isConnected(bridge, islands) {
   return islands[bridge[0]] === islands[bridge[1]];
 }
+
 function connect(bridge, islands) {
   let small = Math.min(islands[bridge[0]], islands[bridge[1]]);
   let big = Math.max(islands[bridge[0]], islands[bridge[1]]);

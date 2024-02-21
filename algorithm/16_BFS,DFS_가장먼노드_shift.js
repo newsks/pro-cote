@@ -30,7 +30,6 @@ function solution(n, edge) {
     graph[src].push(dest); // 출발지(graph[src]) => 도착지(dest)를 인접리스트에 추가
     graph[dest].push(src); // 양방향이기때문에 둘다 구현  도착지 => 출발지
   }
-
   // 각 정점의 길이를 구할 수 있도록 배열 만들기
   const distance = Array(n + 1).fill(0); // 정점만큼 배열을 만들고 0으로 초기화
   distance[1] = 1; // 1번의 길이는 1이라고 정한다.
@@ -41,7 +40,6 @@ function solution(n, edge) {
     const src = queue.shift(); // 원점 shift는 O(n)이지만 요소가 적을 경우에는 자바스크립트 엔진에서 최적화를 해준다.
     for (const dest of graph[src]) {
       //출발지로부터 목적지 요소들을 뽑아준다
-
       if (distance[dest] === 0) {
         //아직 가지않은 경로는 0으로 초기화 되어있음
         queue.push(dest);

@@ -52,17 +52,14 @@ function solution(N, road, K) {
   for (let i = 1; i <= N; i++) {
     let curr = -1;
     let min = Infinity;
-
     for (let j = 1; j <= N; j++) {
       if (!visited[j] && min > dist[j]) {
         min = dist[j];
         curr = j;
       }
     }
-
     if (curr < 0) return;
     visited[curr] = true;
-
     for (let j = 1; j <= N; j++) {
       if (dist[j] > dist[curr] + adj[curr][j]) {
         dist[j] = dist[curr] + adj[curr][j];

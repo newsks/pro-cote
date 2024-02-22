@@ -28,6 +28,7 @@ function solution(gems) {
   collect.set(gems[0], 1); // 시작하면서 첫 보석을 담는다
 
   while (start < gems.length && end < gems.length) {
+
     // 두 포인터가 끝에 도달한다면 종료
     if (collect.size === gemKinds) {
       // 모든 보석을 구매할 수 있다면 종료
@@ -44,7 +45,9 @@ function solution(gems) {
       }
 
       start += 1;
+
     } else {
+      
       end += 1;
       collect.set(gems[end], 1 + (collect.get(gems[end]) || 0)); // 보석을 추가한다.
     }

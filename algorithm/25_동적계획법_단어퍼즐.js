@@ -20,5 +20,6 @@ function solution(strs, t) {
       }
     }
   }
+
   return dp[t.length] === Infinity ? -1 : dp[t.length];
 }

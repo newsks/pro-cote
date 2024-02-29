@@ -8,9 +8,7 @@
 // 암호화된 배열은 지도의 각 가로줄에서 벽 부분을 1, 공백 부분을 0으로 부호화했을 때 얻어지는 이진수에 해당하는 값의 배열이다.
 
 function solution(n, arr1, arr2) {
-
   let answer = [];
-  
   for (let i = 0; i < n; i++) {
     let row = (arr1[i] | arr2[i]).toString(2);
     row = row.padStart(n, "0");
@@ -18,6 +16,6 @@ function solution(n, arr1, arr2) {
     row = row.replace(/0/g, " ");
     answer.push(row);
   }
-  
+
   return answer;
 }

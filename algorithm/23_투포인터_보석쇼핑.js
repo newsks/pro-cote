@@ -40,6 +40,7 @@ function solution(gems) {
         // 만약 0이 됐다면 목록에서 제거된다.
         collect.delete(gems[start]);
       }
+
       start += 1;
     } else {
       end += 1;

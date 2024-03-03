@@ -32,6 +32,7 @@ function solution(n) {
       answer++;
       return;
     }
+
     for (let i = 0; i < n; i++) {
       check[level] = i;
       if (isPossible(level)) {

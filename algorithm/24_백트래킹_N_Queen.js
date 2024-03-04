@@ -26,13 +26,11 @@ function solution(n) {
     }
     return true;
   }
-
   function DFS(level) {
     if (level === n) {
       answer++;
       return;
     }
-
     for (let i = 0; i < n; i++) {
       check[level] = i;
       if (isPossible(level)) {
@@ -40,8 +38,6 @@ function solution(n) {
       }
     }
   }
-
   DFS(0);
-
   return answer;
 }

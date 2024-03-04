@@ -11,9 +11,7 @@
 
 function solution(strs, t) {
   const dp = Array(t.length + 1).fill(Infinity);
-
   dp[0] = 0;
-
   for (let i = 1; i <= t.length; i++) {
     for (let str of strs) {
       if (t.substr(i - str.length, str.length) === str) {

@@ -27,6 +27,7 @@
 
 function solution(genres, plays) {
   const genreMap = new Map();
+
   genres
     .map((genres, index) => [genres, plays[index]]) //장르와 재생횟수로 묶어 준다
     .forEach(([genre, play], index) => {

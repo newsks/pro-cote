@@ -33,12 +33,10 @@ function solution(n, edge) {
 
   // 각 정점의 길이를 구할 수 있도록 배열 만들기
   const distance = Array(n + 1).fill(0); // 정점만큼 배열을 만들고 0으로 초기화
-
   distance[1] = 1; // 1번의 길이는 1이라고 정한다.
 
   // BFS(너비우선탐색) : 간선을 순회하기위해 인접요소부터 탐색
   const queue = [1];
-
   while (queue.length > 0) {
     const src = queue.shift(); // 원점 shift는 O(n)이지만 요소가 적을 경우에는 자바스크립트 엔진에서 최적화를 해준다.
     for (const dest of graph[src]) {

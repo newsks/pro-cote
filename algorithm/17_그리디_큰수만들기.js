@@ -20,7 +20,6 @@
 
 function solution(number, k) {
   const stack = []; // 스택을 만든다.
-
   let count = 0; //몇개를 지웠는지 카운팅해주기위해 카운트 변수생성
 
   for (const item of number) {
@@ -31,7 +30,6 @@ function solution(number, k) {
     }
     stack.push(item);
   }
-
   while (count < k) {
     stack.pop();
     count += 1;

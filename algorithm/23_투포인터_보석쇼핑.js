@@ -35,6 +35,7 @@ function solution(gems) {
         //구간을 갱신
         answer = [start + 1, end + 1];
       }
+
       collect.set(gems[start], collect.get(gems[start]) - 1); // 첫 번째 포인터에 해당하는 보석을 한 개 줄인다.
       if (collect.get(gems[start]) === 0) {
         // 만약 0이 됐다면 목록에서 제거된다.

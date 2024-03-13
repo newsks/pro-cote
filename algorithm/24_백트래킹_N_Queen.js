@@ -26,7 +26,6 @@ function solution(n) {
     }
     return true;
   }
-
   function DFS(level) {
     if (level === n) {
       answer++;
@@ -39,8 +38,6 @@ function solution(n) {
       }
     }
   }
-
   DFS(0);
-
   return answer;
 }

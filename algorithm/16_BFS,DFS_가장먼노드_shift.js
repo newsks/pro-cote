@@ -25,7 +25,6 @@
 
 function solution(n, edge) {
   const graph = Array.from(Array(n + 1), () => []); // 1번부터 시작하기위해 n+1, 초기값() => []
-
   for (const [src, dest] of edge) {
     graph[src].push(dest); // 출발지(graph[src]) => 도착지(dest)를 인접리스트에 추가
     graph[dest].push(src); // 양방향이기때문에 둘다 구현  도착지 => 출발지

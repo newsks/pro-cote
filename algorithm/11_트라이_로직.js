@@ -4,7 +4,6 @@ class Node {
     this.children = new Map();
   }
 }
-
 class Trie {
   constructor() {
     this.root = new Node();

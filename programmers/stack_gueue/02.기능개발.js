@@ -38,7 +38,6 @@ function solution(progresses, speeds) {
     Math.ceil((100 - progress) / speeds[index])
   );
   let maxDay = days[0];
-
   let count = 1;
   for (let i = 1; i < days.length; i++) {
     if (days[i] <= maxDay) {

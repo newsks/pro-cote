@@ -25,6 +25,7 @@ function solution(gems) {
 
   const gemKinds = new Set(gems).size; //겹치지 않는 보석의 갯수
   const collect = new Map(); // 보석을 담아둘 변수
+
   collect.set(gems[0], 1); // 시작하면서 첫 보석을 담는다
 
   while (start < gems.length && end < gems.length) {
@@ -40,6 +41,7 @@ function solution(gems) {
         // 만약 0이 됐다면 목록에서 제거된다.
         collect.delete(gems[start]);
       }
+
       start += 1;
     } else {
       end += 1;

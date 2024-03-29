@@ -9,6 +9,7 @@
 
 function solution(n, arr1, arr2) {
   let answer = [];
+  
   for (let i = 0; i < n; i++) {
     let row = (arr1[i] | arr2[i]).toString(2);
     row = row.padStart(n, "0");

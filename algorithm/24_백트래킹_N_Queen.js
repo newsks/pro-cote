@@ -14,6 +14,7 @@
 function solution(n) {
   let answer = 0;
   let check = new Array(n).fill(0);
+
   function isPossible(level) {
     for (let i = 0; i < level; i++) {
       if (

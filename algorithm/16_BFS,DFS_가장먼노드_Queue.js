@@ -29,11 +29,9 @@ class Queue {
     this.front = 0;
     this.rear = 0;
   }
-
   enqueue(value) {
     this.queue[this.rear++] = value; // 변수를 받아서 rear에 하나씩 추가
   }
-
   dequeue() {
     const value = this.queue[this.front]; // 우선 front에 있는 값을 빼내고
     delete this.queue[this.front]; //기존에 있던 배열에 있던 값은 지워준다
@@ -44,7 +42,6 @@ class Queue {
     return this.rear === this.front;
   }
 }
-
 function solution(n, edge) {
   const graph = Array.from(Array(n + 1), () => []); // 1번부터 시작하기위해 n+1, 초기값() => []
   for (const [src, dest] of edge) {
@@ -59,7 +56,6 @@ function solution(n, edge) {
   // BFS
   const queue = new Queue();
   queue.enqueue(1);
-
   while (!queue.isEmpty()) {
     // queue가 비어있는지 안비어있는지
     const src = queue.dequeue(); // shift를 dequeue로 바꿔준다

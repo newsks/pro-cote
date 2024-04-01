@@ -44,6 +44,5 @@ function solution(gems) {
       collect.set(gems[end], 1 + (collect.get(gems[end]) || 0)); // 보석을 추가한다.
     }
   }
-
   return answer;
 }

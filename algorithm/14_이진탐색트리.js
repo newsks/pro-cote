@@ -5,16 +5,19 @@ class Node {
     this.right = null;
   }
 }
+
 class BinarySearchTree {
   constructor() {
     this.root = null;
   }
+
   insert(value) {
     const newNode = new Node(value);
     if (this.root === null) {
       this.root = newNode;
       return;
     }
+
     let currentNode = this.root;
     while (currentNode !== null) {
       if (currentNode.value < value) {
@@ -32,6 +35,7 @@ class BinarySearchTree {
       }
     }
   }
+
   has(value) {
     let currentNode = this.root;
     while (currentNode !== null) {

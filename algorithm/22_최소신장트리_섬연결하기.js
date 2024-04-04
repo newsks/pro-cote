@@ -24,7 +24,6 @@ function solution(n, costs) {
   let answer = 0;
   let islands = [];
   let bridges = costs.sort((a, b) => a[2] - b[2]);
-
   for (let i = 0; i < n; i++) {
     islands[i] = i;
   }

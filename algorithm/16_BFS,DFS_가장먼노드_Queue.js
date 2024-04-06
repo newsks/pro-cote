@@ -29,11 +29,9 @@ class Queue {
     this.front = 0;
     this.rear = 0;
   }
-
   enqueue(value) {
     this.queue[this.rear++] = value; // 변수를 받아서 rear에 하나씩 추가
   }
-
   dequeue() {
     const value = this.queue[this.front]; // 우선 front에 있는 값을 빼내고
     delete this.queue[this.front]; //기존에 있던 배열에 있던 값은 지워준다
@@ -45,18 +43,15 @@ class Queue {
     return this.rear === this.front;
   }
 }
-
 function solution(n, edge) {
   const graph = Array.from(Array(n + 1), () => []); // 1번부터 시작하기위해 n+1, 초기값() => []
   for (const [src, dest] of edge) {
     graph[src].push(dest); // 출발지(graph[src]) => 도착지(dest)를 인접리스트에 추가
     graph[dest].push(src); // 양방향이기때문에 둘다 구현  도착지 => 출발지
   }
-
   // 각 정점의 길이를 구할 수 있도록 배열 만들기
   const distance = Array(n + 1).fill(0); // 정점만큼 배열을 만들고 0으로 초기화
   distance[1] = 1; // 1번의 길이는 1이라고 정한다.
-
   // BFS
   const queue = new Queue();
   queue.enqueue(1);

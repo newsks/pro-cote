@@ -29,9 +29,11 @@ class Queue {
     this.front = 0;
     this.rear = 0;
   }
+
   enqueue(value) {
     this.queue[this.rear++] = value; // 변수를 받아서 rear에 하나씩 추가
   }
+
   dequeue() {
     const value = this.queue[this.front]; // 우선 front에 있는 값을 빼내고
     delete this.queue[this.front]; //기존에 있던 배열에 있던 값은 지워준다

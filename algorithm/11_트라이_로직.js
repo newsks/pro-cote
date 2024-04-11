@@ -4,6 +4,7 @@ class Node {
     this.children = new Map();
   }
 }
+
 class Trie {
   constructor() {
     this.root = new Node();
@@ -17,6 +18,7 @@ class Trie {
       currentNode = currentNode.children.get(char);
     }
   }
+
   has(string) {
     let currentNode = this.root;
     for (const char of string) {

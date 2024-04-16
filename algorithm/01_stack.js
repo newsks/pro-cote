@@ -14,7 +14,6 @@
 
 function solution(s) {
   let count = 0;
-
   for (const c of s) {
     if (c === "(") {
       count += 1;

@@ -2,7 +2,6 @@ class MaxHeap {
   constructor() {
     this.heap = [null];
   }
-
   push(value) {
     this.heap.push(value);
     let currentIndex = this.heap.length - 1;
@@ -15,14 +14,12 @@ class MaxHeap {
       parentIndex = Math.floor(currentIndex / 2);
     }
   }
-
   pop() {
     const returnValue = this.heap[1];
     this.heap[1] = this.heap.pop();
     let currentIndex = 1;
     let leftIndex = 2;
     let rightIndex = 3;
-
     while (
       this.heap[currentIndex] < this.heap[leftIndex] ||
       this.heap[currentIndex] < this.heap[rightIndex]

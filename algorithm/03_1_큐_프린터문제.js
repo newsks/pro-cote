@@ -11,13 +11,11 @@ class Node {
     this.next = null;
   }
 }
-
 class Queue {
   constructor() {
     this.head = null;
     this.tail = null;
   }
-
   // 값 추가하기
   enqueue(newValue) {
     const newNode = new Node(newValue);
@@ -28,13 +26,11 @@ class Queue {
       this.tail = newNode;
     }
   }
-
   dequeue() {
     const value = this.head.value;
     this.head = this.head.next;
     return value;
   }
-
   peek() {
     return this.head.value;
   }
@@ -45,9 +41,7 @@ function solution(priorities, location) {
   for (let i = 0; i < priorities.length; i++) {
     queue.enqueue([priorities[i], i]);
   }
-
   priorities.sort((a, b) => b - a);
-
   let count = 0;
   while (true) {
     const currentValue = queue.peek();

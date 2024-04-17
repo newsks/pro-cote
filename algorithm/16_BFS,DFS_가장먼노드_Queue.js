@@ -58,6 +58,7 @@ function solution(n, edge) {
   const queue = new Queue();
   queue.enqueue(1);
   while (!queue.isEmpty()) {
+    
     // queue가 비어있는지 안비어있는지
     const src = queue.dequeue(); // shift를 dequeue로 바꿔준다
     for (const dest of graph[src]) {

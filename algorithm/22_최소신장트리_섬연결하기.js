@@ -27,7 +27,6 @@ function solution(n, costs) {
   for (let i = 0; i < n; i++) {
     islands[i] = i;
   }
-
   while (bridges.length > 0) {
     let bridge = bridges.shift();
     if (!isConnected(bridge, islands)) {

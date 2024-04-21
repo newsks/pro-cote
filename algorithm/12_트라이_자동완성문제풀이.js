@@ -30,7 +30,6 @@ function makeTrie(words) {
   }
   return root;
 }
-
 function solution(words) {
   let answer = 0;
   const trie = makeTrie(words);

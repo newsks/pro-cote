@@ -27,7 +27,6 @@
 function solution(N, road, K) {
   let answer = 0;
   const adj = Array.from({ length: N + 1 }, () => Array(N + 1).fill(Infinity));
-
   // 자기 자신으로 가는 비용은 0
   for (let i = 1; i <= N; i++) {
     for (let j = 1; j <= N; j++) {
@@ -64,6 +63,7 @@ function solution(N, road, K) {
       }
     }
   }
+  
   // K이하의 시간에 배달 가능하 마을의 개수를 세기
   dist.forEach((d) => {
     if (d <= K) answer++;

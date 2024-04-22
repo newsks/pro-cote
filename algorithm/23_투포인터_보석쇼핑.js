@@ -22,9 +22,11 @@ function solution(gems) {
   let answer = [0, gems.length]; // 가장 긴 길이로 초기화
   let start = 0;
   let end = 0;
+
   const gemKinds = new Set(gems).size; //겹치지 않는 보석의 갯수
   const collect = new Map(); // 보석을 담아둘 변수
   collect.set(gems[0], 1); // 시작하면서 첫 보석을 담는다
+  
   while (start < gems.length && end < gems.length) {
     // 두 포인터가 끝에 도달한다면 종료
     if (collect.size === gemKinds) {

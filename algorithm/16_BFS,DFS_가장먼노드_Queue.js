@@ -49,7 +49,6 @@ function solution(n, edge) {
     graph[src].push(dest); // 출발지(graph[src]) => 도착지(dest)를 인접리스트에 추가
     graph[dest].push(src); // 양방향이기때문에 둘다 구현  도착지 => 출발지
   }
-
   // 각 정점의 길이를 구할 수 있도록 배열 만들기
   const distance = Array(n + 1).fill(0); // 정점만큼 배열을 만들고 0으로 초기화
   distance[1] = 1; // 1번의 길이는 1이라고 정한다.
@@ -58,7 +57,6 @@ function solution(n, edge) {
   const queue = new Queue();
   queue.enqueue(1);
   while (!queue.isEmpty()) {
-    
     // queue가 비어있는지 안비어있는지
     const src = queue.dequeue(); // shift를 dequeue로 바꿔준다
     for (const dest of graph[src]) {
@@ -70,7 +68,6 @@ function solution(n, edge) {
       }
     }
   }
-
   // console.log(distance); // [0,1,2,2,3,3,3]
   const max = Math.max(...distance); // 거리들 중에 가장 큰 값을 뽑아준다
   return distance.filter((item) => item === max).length; // 최대값과 같은 요소들이 몇개나 있는지 length를 통해 구해준다

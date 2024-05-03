@@ -52,11 +52,9 @@ function solution(n, edge) {
     graph[src].push(dest); // 출발지(graph[src]) => 도착지(dest)를 인접리스트에 추가
     graph[dest].push(src); // 양방향이기때문에 둘다 구현  도착지 => 출발지
   }
-
   // 각 정점의 길이를 구할 수 있도록 배열 만들기
   const distance = Array(n + 1).fill(0); // 정점만큼 배열을 만들고 0으로 초기화
   distance[1] = 1; // 1번의 길이는 1이라고 정한다.
-
   // BFS
   const queue = new Queue();
   queue.enqueue(1);

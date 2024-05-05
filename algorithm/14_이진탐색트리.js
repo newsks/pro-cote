@@ -10,14 +10,12 @@ class BinarySearchTree {
   constructor() {
     this.root = null;
   }
-
   insert(value) {
     const newNode = new Node(value);
     if (this.root === null) {
       this.root = newNode;
       return;
     }
-
     let currentNode = this.root;
     while (currentNode !== null) {
       if (currentNode.value < value) {

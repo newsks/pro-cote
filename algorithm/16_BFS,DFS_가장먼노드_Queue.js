@@ -42,7 +42,6 @@ class Queue {
     return this.rear === this.front;
   }
 }
-
 function solution(n, edge) {
   const graph = Array.from(Array(n + 1), () => []); // 1번부터 시작하기위해 n+1, 초기값() => []
   for (const [src, dest] of edge) {
@@ -67,7 +66,6 @@ function solution(n, edge) {
       }
     }
   }
-
   // console.log(distance); // [0,1,2,2,3,3,3]
   const max = Math.max(...distance); // 거리들 중에 가장 큰 값을 뽑아준다
   return distance.filter((item) => item === max).length; // 최대값과 같은 요소들이 몇개나 있는지 length를 통해 구해준다

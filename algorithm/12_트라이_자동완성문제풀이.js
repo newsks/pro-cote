@@ -30,11 +30,9 @@ function makeTrie(words) {
   }
   return root;
 }
-
 function solution(words) {
   let answer = 0;
   const trie = makeTrie(words);
-
   for (const word of words) {
     let count = 0;
     let current = trie;
@@ -47,6 +45,5 @@ function solution(words) {
     }
     answer += count;
   }
-
   return answer;
 }

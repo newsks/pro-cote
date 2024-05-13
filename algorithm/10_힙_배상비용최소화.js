@@ -58,7 +58,6 @@ class MaxHeap {
     return returnValue;
   }
 }
-
 // solution 함수 구현
 function solution(no, works) {
   // 모든 작업의 합보다 no가 크면 배상 비용을 낼 필요가 없다.

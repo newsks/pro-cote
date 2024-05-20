@@ -27,12 +27,14 @@
 function solution(N, road, K) {
   let answer = 0;
   const adj = Array.from({ length: N + 1 }, () => Array(N + 1).fill(Infinity));
+
   // 자기 자신으로 가는 비용은 0
   for (let i = 1; i <= N; i++) {
     for (let j = 1; j <= N; j++) {
       if (i === j) adj[i][j] = 0;
     }
   }
+
   // 주어진 도로 정보를 인접 행렬에 반영
   road.forEach(([a, b, c]) => {
     if (c < adj[a][b]) {
@@ -40,6 +42,7 @@ function solution(N, road, K) {
       adj[b][a] = c;
     }
   });
+
   // 다익스트라 알고리즘
   const dist = Array(N + 1).fill(Infinity);
   dist[1] = 0;

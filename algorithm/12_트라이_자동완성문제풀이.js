@@ -18,7 +18,6 @@
 // 사실 문제 이름부터 자동완성이기 때문에 바로 Trie를 떠올릴 수 있습니다. 거기에 문제 내용까지 살펴보면 자동완성 기능이 되어야 최소 입력 글자를 알 수 있기에 이 문제에선 Trie가 가장 효율적인 자료구조라는 것을 알 수 있습니다.
 
 function makeTrie(words) {
-  
   const root = {};
   for (const word of words) {
     let current = root;
@@ -31,7 +30,6 @@ function makeTrie(words) {
   }
   return root;
 }
-
 function solution(words) {
   let answer = 0;
   const trie = makeTrie(words);

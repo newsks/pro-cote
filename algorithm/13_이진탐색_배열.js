@@ -4,7 +4,6 @@ function binarySearch(array, findValue) {
   let left = 0;
   let right = array.length - 1;
   let mid = Math.floor((left + right) / 2);
-
   while (left <= right) {
     if (array[mid] === findValue) {
       return mid;

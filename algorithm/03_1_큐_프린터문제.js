@@ -35,12 +35,14 @@ class Queue {
     return this.head.value;
   }
 }
+
 function solution(priorities, location) {
   const queue = new Queue();
 
   for (let i = 0; i < priorities.length; i++) {
     queue.enqueue([priorities[i], i]);
   }
+
   priorities.sort((a, b) => b - a);
   let count = 0;
   while (true) {

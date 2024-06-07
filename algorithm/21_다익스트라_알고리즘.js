@@ -64,7 +64,6 @@ function solution(N, road, K) {
       }
     }
   }
-
   // K이하의 시간에 배달 가능하 마을의 개수를 세기
   dist.forEach((d) => {
     if (d <= K) answer++;

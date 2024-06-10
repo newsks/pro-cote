@@ -1,5 +1,4 @@
 const array = [1, 1, 5, 124, 400, 500, 1004, 2876, 8712];
-
 function binarySearch(array, findValue) {
   let left = 0;
   let right = array.length - 1;

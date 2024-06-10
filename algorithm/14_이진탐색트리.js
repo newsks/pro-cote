@@ -32,7 +32,6 @@ class BinarySearchTree {
       }
     }
   }
-
   has(value) {
     let currentNode = this.root;
     while (currentNode !== null) {

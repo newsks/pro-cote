@@ -9,6 +9,7 @@ class Trie {
   constructor() {
     this.root = new Node();
   }
+  
   insert(string) {
     let currentNode = this.root;
     for (const char of string) {
@@ -18,6 +19,7 @@ class Trie {
       currentNode = currentNode.children.get(char);
     }
   }
+
   has(string) {
     let currentNode = this.root;
     for (const char of string) {

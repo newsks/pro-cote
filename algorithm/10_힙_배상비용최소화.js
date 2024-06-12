@@ -16,7 +16,6 @@ class MaxHeap {
   constructor() {
     this.heap = [null];
   }
-
   push(value) {
     this.heap.push(value);
     let currentIndex = this.heap.length - 1;
@@ -29,7 +28,6 @@ class MaxHeap {
       parentIndex = Math.floor(currentIndex / 2);
     }
   }
-  
   pop() {
     if (this.heap.length === 2) return this.heap.pop(); // 루트 정점만 남은 경우
     const returnValue = this.heap[1];

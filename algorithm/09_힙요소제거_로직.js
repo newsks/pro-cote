@@ -5,7 +5,6 @@ pop();
   let currentIndex = 1;
   let leftIndex = 2;
   let rightIndex = 3;
-
   while (
     this.heap[currentIndex] < this.heap[leftIndex] ||
     this.heap[currentIndex] < this.heap[rightIndex]

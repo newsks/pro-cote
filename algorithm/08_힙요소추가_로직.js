@@ -14,7 +14,6 @@ class MaxHeap {
       parentIndex = Math.floor(currentIndex / 2);
     }
   }
-
   pop() {
     const returnValue = this.heap[1];
     this.heap[1] = this.heap.pop();

@@ -5,6 +5,7 @@ class Node {
     this.right = null;
   }
 }
+
 class BinarySearchTree {
   constructor() {
     this.root = null;
@@ -32,6 +33,7 @@ class BinarySearchTree {
       }
     }
   }
+
   has(value) {
     let currentNode = this.root;
     while (currentNode !== null) {

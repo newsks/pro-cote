@@ -53,9 +53,11 @@ function solution(n, edge) {
   // 각 정점의 길이를 구할 수 있도록 배열 만들기
   const distance = Array(n + 1).fill(0); // 정점만큼 배열을 만들고 0으로 초기화
   distance[1] = 1; // 1번의 길이는 1이라고 정한다.
+
   // BFS
   const queue = new Queue();
   queue.enqueue(1);
+
   while (!queue.isEmpty()) {
     // queue가 비어있는지 안비어있는지
     const src = queue.dequeue(); // shift를 dequeue로 바꿔준다

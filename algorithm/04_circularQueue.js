@@ -7,7 +7,6 @@ class Queue {
     this.rear = 0;
     this.size = 0;
   }
-
   enqueue(value) {
     if (this.isFull()) {
       console.log("Queue is full");
@@ -17,7 +16,6 @@ class Queue {
     this.rear = (this.rear + 1) % this.maxSize;
     this.size += 1;
   }
-
   dequeue() {
     const value = this.queue[this.front];
     delete this.queue[this.front];

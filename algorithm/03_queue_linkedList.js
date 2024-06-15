@@ -12,6 +12,7 @@ class Queue {
     this.tail = null;
     this.size = 0;
   }
+
   enqueue(newValue) {
     const newNode = new Node(newValue);
     if (this.head === null) {
@@ -22,12 +23,14 @@ class Queue {
     }
     this.size += 1;
   }
+
   dequeue() {
     const value = this.head.value;
     this.head = this.head.next;
     this.size -= 1;
     return value;
   }
+
   peek() {
     return this.head.value;
   }

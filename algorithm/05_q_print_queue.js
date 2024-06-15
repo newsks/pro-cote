@@ -27,7 +27,6 @@ class Node {
     this.next = null; //next 포인터 선언
   }
 }
-
 class Queue {
   constructor() {
     this.head = null;
@@ -44,13 +43,11 @@ class Queue {
       this.tail = newNode; // 새로운 node가 꼬리가 될 수 있도록 설정해준다
     }
   }
-
   dequeue() {
     const value = this.head.value; // head의 value를 별도의 상수에 담아둔다
     this.head = this.head.next; // head를 현재의 head의 next로 담아둔다
     return value; // 앞서 담아둔 head의 값을 반환해 준다
   }
-
   peek() {
     return this.head.value; // 현재 head의 값을 알아내는 peek값
   }
